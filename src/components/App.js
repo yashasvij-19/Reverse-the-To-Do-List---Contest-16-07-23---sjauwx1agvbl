@@ -24,12 +24,19 @@ function App() {
     createdAt: '18:00',
   }
   ]);
-
+  
+function reverse(){
+    setTodos((todos) => todos.reverse());
+}
+  
   return (
     <div id="main">
-      <button>Reverse</button>
+      <button onClick={reverse}>Reverse</button>
       <table>
         <tbody>
+          {todos.map((todo) => (
+            <ToDo key={todo.id} todoId={todo.id} createdAt={todo.createdAt} />
+          ))}
         </tbody>
       </table>
     </div>
