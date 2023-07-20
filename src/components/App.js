@@ -26,7 +26,7 @@ function App() {
   ]);
   
 function reverse(){
-    setTodos((todos) => todos.reverse());
+      setTodos((todos) => [...todos].reverse());;
 }
   
   return (
